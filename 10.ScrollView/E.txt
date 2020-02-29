@@ -1,0 +1,60 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ * Nao e recomendado para uma grande lista de informacoes, pq ele carrega todos os N elementos e puxa para a memoria
+ */
+
+import React, { Component } from 'react';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  TextInput,
+  Button,
+  Alert,
+  ScrollView
+} from 'react-native';
+
+export default class ScrollViewApp extends Component{
+  render(){
+    return (
+      <ScrollView>
+        <View style={{margin: 20, flexDirection: 'row', justifyContent: 'flex-end'}}>
+          <Text style={{fontSize: 40}}>Olá tudo bem?</Text>
+        </View>
+
+        <View style={{margin: 20, flexDirection: 'row', justifyContent: 'flex-start'}}>
+          <Text style={{fontSize: 40}}>Tudo bem e você?</Text>
+        </View>
+
+        <View style={{margin: 20, flexDirection: 'row', justifyContent: 'flex-end'}}>
+          <Text style={{fontSize: 40}}>Olá tudo bem?</Text>
+        </View>
+
+        <View style={{margin: 20, flexDirection: 'row', justifyContent: 'flex-start'}}>
+          <Text style={{fontSize: 40}}>Tudo bem e você?</Text>
+        </View>
+
+        <View style={{margin: 20, flexDirection: 'row', justifyContent: 'flex-end'}}>
+          <Text style={{fontSize: 40}}>Olá tudo bem?</Text>
+        </View>
+
+        <View style={{margin: 20, flexDirection: 'row', justifyContent: 'flex-start'}}>
+          <Text style={{fontSize: 40}}>Tudo bem e você?</Text>
+        </View>
+
+        <View style={{margin: 20, flexDirection: 'row', justifyContent: 'flex-end'}}>
+          <Text style={{fontSize: 40}}>Olá tudo bem?</Text>
+        </View>
+
+        <View style={{margin: 20, flexDirection: 'row', justifyContent: 'flex-start'}}>
+          <Text style={{fontSize: 40}}>Tudo bem e você?</Text>
+        </View>
+      </ScrollView>
+    );
+  }
+}

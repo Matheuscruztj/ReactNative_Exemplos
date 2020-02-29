@@ -1,0 +1,31 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ */
+
+import React, { Component } from 'react';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  TextInput,
+  Button,
+  Alert
+} from 'react-native';
+
+export default class ButtonApp extends Component{
+  render(){
+    return (
+      <View>
+        <Button
+          onPress={ ()=>{Alert.alert('Você clicou no botão!'); } } 
+          title="Clique aqui"
+        />
+      </View>
+    );
+  }
+}

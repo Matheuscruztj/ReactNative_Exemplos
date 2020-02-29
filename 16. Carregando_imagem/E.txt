@@ -1,0 +1,28 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ * 
+ * Renderiza somente quando 'move' a página, assim ficando mais leve em desempenho e visualmente
+ */
+
+import React, { Component } from 'react';
+import {
+  View,
+  Text,
+  Button,
+  Image,
+} from 'react-native';
+
+export default class App extends Component{
+  render(){
+    return (
+      <View>
+        {/* vai dar problema, pq a imagem não existe */}
+        <Image source={require('../assets/imagem.png')}></Image>
+      </View>
+    );
+  }
+}

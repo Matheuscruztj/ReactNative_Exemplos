@@ -1,0 +1,47 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ */
+
+import React, { Component } from 'react';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  TextInput
+} from 'react-native';
+
+export default class PizzaTranslatorApp extends Component{
+  constructor(props){
+    super(props);
+    // alugo uma variavel global chamada text
+    this.state = {text: ''};
+  }
+
+  render(){
+    return (
+      <View style={{padding: 40}}>
+        <TextInput 
+          style={{height: 50, fontSize: 22}} 
+          placeholder="Digite aqui para traduzir!"
+          // seto na variavel global text como o valor do campo
+          onChangeText={ (text) => this.setState({text}) }
+        />
+        
+        <Text style={{padding: 50, fontSize: 20}}>
+          {/* 
+            primeiro tira os espacos
+            e verifica a cada indice no map
+                                -> se tiver um valor(OK) -> mostra pizza
+                                -> se nao tiver um valor(OK) -> nao mostra nada
+          */}
+          {this.state.text.split(' ').map( (word) => (word) ? ' pizza':'' )}
+        </Text>
+      </View>
+    );
+  }
+}

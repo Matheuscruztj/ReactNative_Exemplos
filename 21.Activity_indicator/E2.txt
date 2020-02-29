@@ -1,0 +1,61 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ */
+
+import React, { Component } from 'react';
+import {
+  View,
+  ActivityIndicator,
+  StyleSheet
+} from 'react-native';
+
+class ActivityIndicatorExample extends Component{
+  state = {animating: true}
+
+  closeActivityIndicator(){
+    setTimeout(
+      () => this.setState({animating: false}),
+      6000
+    );
+  }
+
+  componentDidMount(){
+    this.closeActivityIndicator();
+  }
+
+  render(){
+    const animating = this.state.animating;
+    return (
+      <View>
+        <ActivityIndicator
+          animating={animating}
+          color='blue'
+          size='large'
+        />
+      </View>
+    );
+  }
+}
+
+export default class App extends React.Component{
+  render(){
+    return (
+      <View style={styles.container}>
+        <ActivityIndicatorExample />
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    // marginTop: 70
+  }
+})

@@ -1,0 +1,29 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ */
+
+import React, { Component } from 'react';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet
+} from 'react-native';
+
+export default class FixedDimensionApp extends Component{
+  render(){
+    return (
+      // componente pai precisa ter pelo menos dimensao 1, pq se ele tiver filhos e o pai estiver zerado, 
+      // não vai aparecer nada na tela
+      <View style={{flex:1}}>
+        <View style={{flex:1, backgroundColor:'powderblue'}}></View>
+        <View style={{flex:2, backgroundColor:'skyblue'}}></View>
+        <View style={{flex:3, backgroundColor:'steelblue'}}></View>
+      </View>
+    );
+  }
+}
